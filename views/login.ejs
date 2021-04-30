@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="login" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logga in</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="/images/galaxy.mp4" type="video/mp4">
+  </video>
+<div class="box">
+  <h2>Welcome back</h2>
+  <form action="/login" method="POST"> 
+    <% if (messages.error) { %>
+      <%= messages.error %>
+    <% } %> 
+    <div class="inputBox">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>  
+    <div class="inputBox">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+      <button type="submit">Logga in 🛸</button>
+    <div class="link"><p>Eller <a href="/register">skapa</a> ett konto</p></div>
+  </form>
+</div>
+</body>
+</html>
